@@ -1,4 +1,4 @@
-package com.itea.homeworks.utils;
+package com.itea.homeworks.utils.calculation;
 
 public enum  CalculationUtils implements OperType{
     ADD('+', (a, b) -> (a + b)),
@@ -7,7 +7,7 @@ public enum  CalculationUtils implements OperType{
     MULTIPLY('*', (a, b) -> (a * b)),
     SQUARE('√', (a, b) -> Math.pow(a, 1.0 / b)),
     POW('^', (a, b) -> Math.pow(a, b)),
-    POWADVANCED('˜', (a, b) -> Math.pow(((a + b) / a) + 117, 2));
+    POWADVANCED('~', (a, b) -> Math.pow(((a + b) / a) + 117, 2));
 
     private final char oper;
     private final OperType operation;

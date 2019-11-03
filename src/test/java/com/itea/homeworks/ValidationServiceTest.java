@@ -1,16 +1,26 @@
 package com.itea.homeworks;
 
-import com.itea.homeworks.task5.Validators;
+import com.itea.homeworks.utils.validation.ValidationUtils;
+import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 public class ValidationServiceTest {
-    private final Validators validator1 = new Validators();
-    private final Validators validator2 = new Validators();
-    private final Validators validator3 = new Validators();
-    private final
-    Validators validator4 = new Validators();
+
+    private ValidationUtils v1;
+    private ValidationUtils v2;
+    private ValidationUtils v3;
+    private ValidationUtils v4;
+
+    @Before
+    public void beforeTest(){
+        v1 = new ValidationUtils();
+        v2 = new ValidationUtils();
+        v3 = new ValidationUtils();
+        v4 = new ValidationUtils();
+    }
 
     @Test
     public void numberShouldBeInsertedCorrectly() {
@@ -21,10 +31,10 @@ public class ValidationServiceTest {
         String value4 = "38098015";
 
         //FUNCTIONALITY
-        boolean result1 = validator1.validatorPhoneNumber(value1);
-        boolean result2 = validator2.validatorPhoneNumber(value2);
-        boolean result3 = validator3.validatorPhoneNumber(value3);
-        boolean result4 = validator4.validatorPhoneNumber(value4);
+        boolean result1 = v1.validatorPhoneNumber(value1);
+        boolean result2 = v2.validatorPhoneNumber(value2);
+        boolean result3 = v3.validatorPhoneNumber(value3);
+        boolean result4 = v4.validatorPhoneNumber(value4);
 
         //TESTS
         assertFalse(result1);
@@ -42,10 +52,10 @@ public class ValidationServiceTest {
         String value4 = "wwer@gmailCom";
 
         //FUNCTIONALITY
-        boolean result1 = validator1.validatorEmail(value1);
-        boolean result2 = validator2.validatorEmail(value2);
-        boolean result3 = validator3.validatorEmail(value3);
-        boolean result4 = validator4.validatorEmail(value4);
+        boolean result1 = v1.validatorEmail(value1);
+        boolean result2 = v2.validatorEmail(value2);
+        boolean result3 = v3.validatorEmail(value3);
+        boolean result4 = v4.validatorEmail(value4);
 
         //TESTS
         assertTrue(result1);
@@ -63,16 +73,16 @@ public class ValidationServiceTest {
         String value4 = "3456778990";
 
         //FUNCTIONALITY
-        boolean result1 = validator1.validatorIP(value1);
-        boolean result2 = validator2.validatorIP(value2);
-        boolean result3 = validator3.validatorIP(value3);
-        boolean result4 = validator4.validatorIP(value4);
+        boolean result1 = v1.validatorIP(value1);
+        boolean result2 = v2.validatorIP(value2);
+        boolean result3 = v3.validatorIP(value3);
+        boolean result4 = v4.validatorIP(value4);
 
         //TESTS
-        assertTrue(result1);
-        assertTrue(result2);
+        assertFalse(result1);
+        assertFalse(result2);
         assertFalse(result3);
-        assertTrue(result4);
+        assertFalse(result4);
     }
 
 }
