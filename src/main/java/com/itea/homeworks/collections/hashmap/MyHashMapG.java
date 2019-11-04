@@ -76,7 +76,7 @@ public class MyHashMapG<K,V> implements HashMapG<K,V>{
 
         for (int i = 0; i < table.length; i++) {
             if (table[i] == table[hash] && e.key.equals(key)) {
-                for (int j = i; j < table.length - i; j++) {
+                for (int j = i; j < table.length - 1; j++) {
                     table[j] = table[j + 1];
                 }
             }
