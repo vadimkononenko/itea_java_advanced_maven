@@ -14,9 +14,13 @@ public class StringServiceTest {
 
     @Test
     public void shouldConcatStringsCorrectly() {
-        String s = "nagibator";
+        String s1 = "nagibator";
+        String s2 = "     ";
+        String s3 = "";
 
-        assertEquals("nagibator228", s.concat("2" + "2" + "8"));
+        assertEquals("nagibator228", s1.concat("2" + "2" + "8"));
+        assertEquals("        ", s2.concat(" " + " " + " "));
+        assertEquals("1 2 3", s3.concat("1" + " 2" + " 3"));
     }
 
     @Test
