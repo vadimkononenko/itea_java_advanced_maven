@@ -4,10 +4,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public final class ValidationUtils {
-    public ValidationUtils() {
-        new ValidationUtils();
-    }
-
     public static boolean validatorPhoneNumber(String number) {
         String regexNumber = "^[38][0-9]{11}$";
         Pattern pattern = Pattern.compile(regexNumber);
