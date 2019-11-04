@@ -15,7 +15,7 @@ public class ValidationServiceTest {
     private ValidationUtils v4;
 
     @Before
-    public void beforeTest(){
+    public void setUp(){
         v1 = new ValidationUtils();
         v2 = new ValidationUtils();
         v3 = new ValidationUtils();
