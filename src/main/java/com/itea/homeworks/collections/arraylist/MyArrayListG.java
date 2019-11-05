@@ -3,7 +3,7 @@ package com.itea.homeworks.collections.arraylist;
 import java.util.Arrays;
 
 public class MyArrayListG<T> implements ArrayListG<T> {
-    private Object array[];
+    private Object[] array;
     private int size;
 
     public MyArrayListG() {
@@ -14,7 +14,7 @@ public class MyArrayListG<T> implements ArrayListG<T> {
     @Override
     public void add(T item) {
         if (size == array.length - 1) {
-            Object newArr[] = new Object[array.length * 2];
+            Object[] newArr = new Object[array.length * 2];
             System.arraycopy(array, 0, newArr, 0, size);
             array = newArr;
         }
@@ -35,7 +35,7 @@ public class MyArrayListG<T> implements ArrayListG<T> {
 
     @Override
     public void clear() {
-
+        array = new Object[10];
     }
 
     @Override
@@ -43,11 +43,11 @@ public class MyArrayListG<T> implements ArrayListG<T> {
         return array[index];
     }
 
-    public Object[] getArray() {
+    private Object[] getArray() {
         return array;
     }
 
-    public int getSize() {
+    private int getSize() {
         return size;
     }
 

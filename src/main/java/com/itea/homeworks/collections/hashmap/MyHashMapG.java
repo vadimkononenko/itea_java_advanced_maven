@@ -2,7 +2,7 @@ package com.itea.homeworks.collections.hashmap;
 
 import java.util.Arrays;
 
-public class MyHashMapG implements HashMapG{
+public class MyHashMapG<K,V> implements HashMapG<K,V>{
     private int size = 16;
     private Entry[] table = new Entry[16];
 
@@ -30,13 +30,13 @@ public class MyHashMapG implements HashMapG{
     }
 
     @Override
-    public Entry get(Object key) {
+    public Object get(K key) {
         int hash = key.hashCode() % size;
         Entry e = table[hash];
 
         while (e != null) {
             if (e.key.equals(key)) {
-                return e;
+                return e.getValue();
             }
             e = e.next;
         }
@@ -44,7 +44,7 @@ public class MyHashMapG implements HashMapG{
     }
 
     @Override
-    public void put(Object key, Object value) {
+    public boolean put(K key, V value) {
         int hash = key.hashCode() % size;
         Entry e = table[hash];
 
@@ -56,12 +56,12 @@ public class MyHashMapG implements HashMapG{
                     e = e.next;
                 }
             }
-            Entry oldBucket = new Entry(key, value);
-            e.next = oldBucket;
+            e.next = new Entry(key, value);
         } else {
             Entry newBucket = new Entry(key, value);
             table[hash] = newBucket;
         }
+        return false;
     }
 
     @Override
@@ -70,17 +70,16 @@ public class MyHashMapG implements HashMapG{
     }
 
     @Override
-    public void remove(Object key) {
+    public void remove(K key) {
         int hash = key.hashCode() % size;
         Entry e = table[hash];
 
         for (int i = 0; i < table.length; i++) {
             if (table[i] == table[hash] && e.key.equals(key)) {
-                for (int j = i; j < table.length - i; j++) {
+                for (int j = i; j < table.length - 1; j++) {
                     table[j] = table[j + 1];
                 }
             }
-            return;
         }
     }
 

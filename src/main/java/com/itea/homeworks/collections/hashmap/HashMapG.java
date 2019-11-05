@@ -1,9 +1,9 @@
 package com.itea.homeworks.collections.hashmap;
 
 public interface HashMapG<K,V> {
-    MyHashMapG.Entry get(K key);
+    Object get(K key);
 
-    void put(K key, V value);
+    boolean put(K key, V value);
 
     void clear();
 
