@@ -8,18 +8,11 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
 public class ValidationServiceTest {
-
     private ValidationUtils v1;
-    private ValidationUtils v2;
-    private ValidationUtils v3;
-    private ValidationUtils v4;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         v1 = new ValidationUtils();
-        v2 = new ValidationUtils();
-        v3 = new ValidationUtils();
-        v4 = new ValidationUtils();
     }
 
     @Test
@@ -32,9 +25,9 @@ public class ValidationServiceTest {
 
         //FUNCTIONALITY
         boolean result1 = v1.validatorPhoneNumber(value1);
-        boolean result2 = v2.validatorPhoneNumber(value2);
-        boolean result3 = v3.validatorPhoneNumber(value3);
-        boolean result4 = v4.validatorPhoneNumber(value4);
+        boolean result2 = v1.validatorPhoneNumber(value2);
+        boolean result3 = v1.validatorPhoneNumber(value3);
+        boolean result4 = v1.validatorPhoneNumber(value4);
 
         //TESTS
         assertFalse(result1);
@@ -53,9 +46,9 @@ public class ValidationServiceTest {
 
         //FUNCTIONALITY
         boolean result1 = v1.validatorEmail(value1);
-        boolean result2 = v2.validatorEmail(value2);
-        boolean result3 = v3.validatorEmail(value3);
-        boolean result4 = v4.validatorEmail(value4);
+        boolean result2 = v1.validatorEmail(value2);
+        boolean result3 = v1.validatorEmail(value3);
+        boolean result4 = v1.validatorEmail(value4);
 
         //TESTS
         assertTrue(result1);
@@ -74,9 +67,9 @@ public class ValidationServiceTest {
 
         //FUNCTIONALITY
         boolean result1 = v1.validatorIP(value1);
-        boolean result2 = v2.validatorIP(value2);
-        boolean result3 = v3.validatorIP(value3);
-        boolean result4 = v4.validatorIP(value4);
+        boolean result2 = v1.validatorIP(value2);
+        boolean result3 = v1.validatorIP(value3);
+        boolean result4 = v1.validatorIP(value4);
 
         //TESTS
         assertFalse(result1);
