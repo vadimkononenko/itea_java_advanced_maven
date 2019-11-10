@@ -4,21 +4,21 @@ import com.itea.homeworks.task6.serialize.SerializeUtils;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.Map;
 
 
 import static org.junit.Assert.assertEquals;
 
-public class SerDeserServiceTest {
+public class SerializeUtilsServiceTest {
     private String[] array;
     private List<String> list;
     private Set set;
-    private HashMap hashMap;
+    private Map<String, Integer> map;
     private SerializeUtils sd;
 
     @Before
@@ -26,11 +26,11 @@ public class SerDeserServiceTest {
         sd = new SerializeUtils();
         list = new ArrayList<>();
         set = new HashSet<String>();
-        hashMap = new HashMap();
+        map = new HashMap();
     }
 
     @Test
-    public void shouldSerDeserArrayCorrectly() throws IOException, ClassNotFoundException {
+    public void shouldSerializeArrayCorrectly() {
         array = new String[]{"first", "second", "third"};
 
         sd.serialize(array, "/Users/vadimkononenko/Desktop/task6/SerDeserArray");
@@ -42,44 +42,41 @@ public class SerDeserServiceTest {
     }
 
     @Test
-    public void shouldSerDeserListCorrectly() throws IOException, ClassNotFoundException {
+    public void shouldSerializeListCorrectly() {
         list.add("1");
         list.add("2");
         list.add("3");
 
         sd.serialize(list, "/Users/vadimkononenko/Desktop/task6/SerDeserList");
+        ArrayList<String> deserialize = (ArrayList<String>) sd.deserialize("/Users/vadimkononenko/Desktop/task6/SerDeserList");
 
-        assertEquals(list.get(0), ((ArrayList<String>) sd.deserialize("/Users/vadimkononenko/Desktop/task6/SerDeserList"))
-                .get(0));
-        assertEquals(list.get(1), ((ArrayList<String>) sd.deserialize("/Users/vadimkononenko/Desktop/task6/SerDeserList"))
-                .get(1));
-        assertEquals(list.get(2), ((ArrayList<String>) sd.deserialize("/Users/vadimkononenko/Desktop/task6/SerDeserList"))
-                .get(2));
+        assertEquals(list.get(0), (deserialize.get(0)));
+        assertEquals(list.get(1), (deserialize.get(1)));
+        assertEquals(list.get(2), (deserialize.get(2)));
     }
 
     @Test
-    public void shouldSerDeserSetCorrectly() throws IOException, ClassNotFoundException {
+    public void shouldSerializeSetCorrectly() {
         set.add("first");
         set.add("second");
         set.add("third");
 
         sd.serialize(set, "/Users/vadimkononenko/Desktop/task6/SerDeserSet");
 
-
         assertEquals(set, sd.deserialize("/Users/vadimkononenko/Desktop/task6/SerDeserSet"));
     }
 
     @Test
-    public void shouldSerDeserHashMapCorrectly() throws IOException, ClassNotFoundException {
-        hashMap.put("first",1);
-        hashMap.put("second",1);
-        hashMap.put("third",1);
+    public void shouldSerializeHashMapCorrectly() {
+        map.put("first", 1);
+        map.put("second", 1);
+        map.put("third", 1);
 
-        sd.serialize(hashMap,"/Users/vadimkononenko/Desktop/task6/SerDeserHashMap");
+        sd.serialize(map, "/Users/vadimkononenko/Desktop/task6/SerDeserHashMap");
         HashMap hashMap1 = (HashMap) sd.deserialize("/Users/vadimkononenko/Desktop/task6/SerDeserHashMap");
 
-        assertEquals(hashMap.get("first"),hashMap1.get("first"));
-        assertEquals(hashMap.get("second"),hashMap1.get("second"));
-        assertEquals(hashMap.get("third"),hashMap1.get("third"));
+        assertEquals(map.get("first"), hashMap1.get("first"));
+        assertEquals(map.get("second"), hashMap1.get("second"));
+        assertEquals(map.get("third"), hashMap1.get("third"));
     }
 }

@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
 public class SingletonBreakingServiceTest {
 
     @Test
-    public void ShouldBeDifferentHashCode() throws IllegalAccessException, InstantiationException, InvocationTargetException {
+    public void ShouldBeDifferentHashCode() throws Exception {
         Singleton instance1 = Singleton.instance.getInstance();
         SingleBreaking breaking = new SingleBreaking();
 
