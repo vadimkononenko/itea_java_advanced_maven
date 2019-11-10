@@ -1,4 +1,4 @@
-package com.itea.homeworks.task6.changefield;
+package com.itea.homeworks.task6.reflection;
 
 import com.itea.homeworks.task5.annotation.Information;
 

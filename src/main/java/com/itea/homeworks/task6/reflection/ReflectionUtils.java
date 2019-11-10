@@ -1,12 +1,12 @@
-package com.itea.homeworks.task6.changefield;
+package com.itea.homeworks.task6.reflection;
 
 import com.itea.homeworks.task5.annotation.Information;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 
-public class SetFiled {
-    public void setField(Children children) throws IllegalAccessException {
+public class ReflectionUtils {
+    public void reflactionSetField(Children children) throws IllegalAccessException {
         for (Field field : children.getClass().getDeclaredFields()) {
             for (Annotation annotation : field.getDeclaredAnnotations()) {
                 if (annotation.annotationType().equals(Information.class) && annotation instanceof Information) {
