@@ -1,4 +1,4 @@
-package com.itea.homeworks.task6.serdeser;
+package com.itea.homeworks.task6.serialize;
 
 import java.io.Serializable;
 import java.util.List;

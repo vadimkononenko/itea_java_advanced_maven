@@ -1,7 +1,7 @@
 package com.itea.homeworks.task6;
 
-import com.itea.homeworks.task6.serdeser.Person;
-import com.itea.homeworks.task6.serdeser.SerDeser;
+import com.itea.homeworks.task6.serialize.Person;
+import com.itea.homeworks.task6.serialize.SerializeUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,12 +12,12 @@ import static org.junit.Assert.assertEquals;
 
 public class PersonSerDeserServiceTest {
     private Person person;
-    private SerDeser sd;
+    private SerializeUtils sd;
 
     @Before
     public void setUp() {
         person = new Person();
-        sd = new SerDeser();
+        sd = new SerializeUtils();
     }
 
     @Test
@@ -27,8 +27,8 @@ public class PersonSerDeserServiceTest {
         person.setAge(18);
         person.setHobbies(Arrays.asList("football", "programming"));
 
-        sd.serialization(person,"/Users/vadimkononenko/Desktop/task6/Task6");
-        Person person1 = (Person) sd.deserialization("/Users/vadimkononenko/Desktop/task6/Task6");
+        sd.serialize(person,"/Users/vadimkononenko/Desktop/task6/Task6");
+        Person person1 = (Person) sd.deserialize("/Users/vadimkononenko/Desktop/task6/Task6");
 
         assertEquals(person.getName(),person1.getName());
         assertEquals(person.getSurname(),person1.getSurname());

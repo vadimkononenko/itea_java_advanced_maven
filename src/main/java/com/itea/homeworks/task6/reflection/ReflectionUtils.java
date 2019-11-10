@@ -6,7 +6,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 
 public class ReflectionUtils {
-    public void reflactionSetField(Children children) throws IllegalAccessException {
+    public void reflectionSetField(Children children) throws IllegalAccessException {
         for (Field field : children.getClass().getDeclaredFields()) {
             for (Annotation annotation : field.getDeclaredAnnotations()) {
                 if (annotation.annotationType().equals(Information.class) && annotation instanceof Information) {

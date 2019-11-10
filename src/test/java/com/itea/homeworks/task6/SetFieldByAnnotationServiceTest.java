@@ -12,7 +12,7 @@ public class SetFieldByAnnotationServiceTest {
         Children children = new Children();
         ReflectionUtils s = new ReflectionUtils();
 
-        s.reflactionSetField(children);
+        s.reflectionSetField(children);
 
         assertEquals(1001,children.ageFirstChildren);
     }

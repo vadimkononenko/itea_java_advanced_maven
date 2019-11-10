@@ -38,7 +38,7 @@ public class ImmutableServiceTest {
 
         assertEquals("Vadim", student.getName());
         assertEquals(Arrays.asList("football","programming"),student.getHobbies());
-        assertEquals(Arrays.asList("ТОЕ","ТВЕ"),student.getLessonsArrears());
+        assertEquals(Arrays.asList("ТОЕ","ТВЕ"),student.getLessons());
         assertEquals(marks,student.getMarks());
         assertEquals(examsOrder,student.getExamsOrder());
     }
