@@ -5,8 +5,8 @@ import com.itea.homeworks.task5.singleton.Singleton;
 import java.lang.reflect.Constructor;
 
 public class SingleBreaking {
-    public Singleton breakSingle(Singleton instance1) throws Exception {
-        Singleton singleton2 = instance1.getInstance();
+    public Singleton breakSingle(Singleton singleton1) throws Exception {
+        Singleton singleton2 = singleton1.getInstance();
 
         Constructor[] constructors = Singleton.class
                 .getDeclaredConstructors();
