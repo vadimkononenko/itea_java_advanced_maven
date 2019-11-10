@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class ImmutableServiceTest {
 
     @Test
-    public void ClassShouldBeImmutable() {
+    public void classShouldBeImmutable() {
         String name = "Vadim";
 
         List<String> hobbies = Arrays.asList("football","programming");
