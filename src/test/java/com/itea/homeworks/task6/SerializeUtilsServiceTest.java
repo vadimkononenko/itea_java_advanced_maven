@@ -34,11 +34,11 @@ public class SerializeUtilsServiceTest {
         array = new String[]{"first", "second", "third"};
 
         sd.serialize(array, "/Users/vadimkononenko/Desktop/task6/SerDeserArray");
-        String[] dataDeser = (String[]) sd.deserialize("/Users/vadimkononenko/Desktop/task6/SerDeserArray");
+        String[] deserialize = (String[]) sd.deserialize("/Users/vadimkononenko/Desktop/task6/SerDeserArray");
 
-        assertEquals(array[0], dataDeser[0]);
-        assertEquals(array[1], dataDeser[1]);
-        assertEquals(array[2], dataDeser[2]);
+        assertEquals(array[0], deserialize[0]);
+        assertEquals(array[1], deserialize[1]);
+        assertEquals(array[2], deserialize[2]);
     }
 
     @Test
