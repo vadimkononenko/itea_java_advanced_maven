@@ -1,7 +1,6 @@
 package com.itea.homeworks.task7.scalablemaps;
 
 import java.util.Iterator;
-import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
