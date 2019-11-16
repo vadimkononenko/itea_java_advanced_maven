@@ -19,8 +19,7 @@ public class FutureTest {
             try {
                 Thread.sleep(200);
             } catch (InterruptedException e) {
-
-                e.printStackTrace();
+                System.err.println(e);
             }
         }
 
