@@ -6,8 +6,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class MyConcurrentHashMap {
-    private final ConcurrentHashMap<Integer,String> conHashMap = new ConcurrentHashMap<Integer,String>();
+    private static ConcurrentHashMap<Integer,String> conHashMap;
     public static void main(String[] args) {
+        conHashMap = new ConcurrentHashMap<Integer,String>();
         ExecutorService service = Executors.newFixedThreadPool(3);
         MyConcurrentHashMap map = new MyConcurrentHashMap();
         service.execute(map.new WriteThreasOne());
