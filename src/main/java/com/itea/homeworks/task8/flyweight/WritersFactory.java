@@ -4,13 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class WritersFactory {
-    private static Map<String, Writer> writers = new HashMap<>();
+    private static Map<String, Writer> writers;
+
+    public WritersFactory() {
+        writers = new HashMap<>();
+    }
 
     public Writer getWriter(String key) {
         Writer writer = writers.get(key);
 
-        if (writer == null){
-            switch (key){
+        if (writer == null) {
+            switch (key) {
                 case "student":
                     System.out.println("Added student");
                     writer = new Student();
@@ -19,8 +23,10 @@ public class WritersFactory {
                     System.out.println("Added worker");
                     writer = new Worker();
                     break;
+                default:
+                    throw new RuntimeException("Writer is unknown");
             }
-            writers.put(key,writer);
+            writers.put(key, writer);
         }
 
         return writer;
