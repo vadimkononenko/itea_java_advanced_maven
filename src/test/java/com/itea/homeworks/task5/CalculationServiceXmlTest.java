@@ -7,7 +7,7 @@ import org.junit.Test;
 import static jdk.nashorn.internal.objects.Global.Infinity;
 import static org.junit.Assert.assertEquals;
 
-public class CalculationServiceTest {
+public class CalculationServiceXmlTest {
     private Service service;
 
     @Before

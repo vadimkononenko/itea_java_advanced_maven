@@ -8,7 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import static org.junit.Assert.assertTrue;
 
-public class SingletonBreakingServiceTest {
+public class SingletonBreakingServiceXmlTest {
 
     @Test
     public void ShouldBeDifferentHashCode() throws Exception {

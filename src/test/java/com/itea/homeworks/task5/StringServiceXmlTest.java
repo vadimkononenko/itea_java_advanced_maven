@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class StringServiceTest {
+public class StringServiceXmlTest {
     @Test
     public void shouldReturnLengthCorrectly() {
         String s = "123456789";
