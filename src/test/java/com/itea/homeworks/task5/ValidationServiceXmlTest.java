@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
-public class ValidationServiceTest {
+public class ValidationServiceXmlTest {
     private ValidationUtils v1;
 
     @Before

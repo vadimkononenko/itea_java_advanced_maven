@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-public class MyHashMapServiceTest {
+public class MyHashMapServiceXmlTest {
     private MyHashMapG<Integer, String> map;
 
     @Before

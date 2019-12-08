@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class SetFieldByAnnotationServiceTest {
+public class SetFieldByAnnotationServiceXmlTest {
     @Test
     public void shouldSetFieldCorrectly() throws IllegalAccessException {
         Children children = new Children();

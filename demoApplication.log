@@ -1,0 +1,14 @@
+[main] ERROR com.itea.homeworks.task9.converters.tojson.ServiceJson  - com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.itea.homeworks.task9.converters.structure.StudentsFacultyList and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS)
+[main] ERROR com.itea.homeworks.task9.converters.toxml.ServiceXml  - javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.internal.SAXException2: unable to marshal type "com.itea.homeworks.task9.converters.structure.StudentsFacultyList" as an element because it is missing an @XmlRootElement annotation]
+[main] ERROR com.itea.homeworks.task9.converters.toxml.ServiceXml  - com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+com.itea.homeworks.task9.converters.structure.StudentsFacultyList does not have a no-arg default constructor.
+	this problem is related to the following location:
+		at com.itea.homeworks.task9.converters.structure.StudentsFacultyList
+
+[main] ERROR com.itea.homeworks.task9.converters.toxml.ServiceXml  - com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+com.itea.homeworks.task9.converters.structure.StudentsFacultyList does not have a no-arg default constructor.
+	this problem is related to the following location:
+		at com.itea.homeworks.task9.converters.structure.StudentsFacultyList
+

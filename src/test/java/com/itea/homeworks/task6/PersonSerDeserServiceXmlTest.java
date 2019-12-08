@@ -10,7 +10,7 @@ import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 
-public class PersonSerDeserServiceTest {
+public class PersonSerDeserServiceXmlTest {
     private Person person;
     private SerializeUtils sd;
 

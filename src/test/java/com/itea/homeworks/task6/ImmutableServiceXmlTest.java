@@ -10,7 +10,7 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
-public class ImmutableServiceTest {
+public class ImmutableServiceXmlTest {
 
     @Test
     public void classShouldBeImmutable() {

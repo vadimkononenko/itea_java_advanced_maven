@@ -14,7 +14,7 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
-public class SerializeUtilsServiceTest {
+public class SerializeUtilsServiceXmlTest {
     private String[] array;
     private List<String> list;
     private Set set;
